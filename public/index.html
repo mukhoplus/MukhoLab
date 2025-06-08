@@ -12,6 +12,16 @@
       user-select: none;
     }
 
+    .clock-image {
+      max-width: 400px;
+      margin: 30px auto;
+    }
+
+    iframe {
+      pointer-events: none;
+      user-select: none;
+    }
+
     .download-button {
       background-color: #9370db;
       color: white;
@@ -24,14 +34,17 @@
       display: inline-block;
     }
 
-    .clock-image {
-      max-width: 400px;
-      margin: 30px auto;
+    .download-button:disabled,
+    .download-button.disabled {
+      background-color: #cccccc;
+      color: #888888;
+      cursor: not-allowed;
+      pointer-events: none;
     }
 
-    iframe {
-      pointer-events: none;
-      user-select: none;
+    .python-button {
+      background-color: #306998;
+      color: #ffd43b;
     }
   </style>
 </head>
@@ -42,14 +55,32 @@
     height="400" 
     style="border: none;"
   ></iframe>
-  <p>
-    <a
-      class="download-button"
-      href="https://colab.research.google.com/drive/1lxVDnOl9GkqhaT07axS9QfomFtNKV6KU?usp=sharing"
-      target="_blank"
-    >
-      실습 다운로드
-    </a>
-  </p>
+  <div class="content">
+    <p>
+      <a
+        class="download-button"
+        href="https://drive.google.com/drive/folders/1JhEOnJDNgnnz4UXuxMZJkQdZ1BYexq_j?usp=drive_link"
+        target="_blank"
+      >
+        강의 자료 다운로드
+      </a>
+      <a
+        class="download-button disabled"
+        href="#"
+        target="_blank"
+        style="margin-left: 10px;"
+      >
+        실습 다운로드
+      </a>
+      <a
+        class="download-button python-button"
+        href="https://wikidocs.net/book/1"
+        target="_blank"
+        style="margin-left: 10px;"
+      >
+        점프 투 파이썬
+      </a>
+    </p>
+  </div>
 </body>
 </html>
